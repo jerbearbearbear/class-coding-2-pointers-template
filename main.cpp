@@ -16,6 +16,7 @@ namespace example1 {
         int var1;
         char var2[10] = {};
 
+        cout << "<example 1>" << endl;
         //TODO 1
         cout << "Size of var1 variable: ";
         cout << sizeof(var1) << endl;
@@ -43,7 +44,9 @@ namespace example2 {
          int var = 5;
          int * varPtr;
 
-          //TODO 2 - store address of var into pointer
+        cout << "<example 2>" << endl;
+
+        //TODO 2 - store address of var into pointer
           varPtr = &var;
           //TODO 2
           //(int *) (cout << "Value of var variable: ");
@@ -70,6 +73,8 @@ namespace example2 {
 namespace example3 {
     void example() {
         //pointer addition
+
+        cout << "<example 3>" << endl;
 
         //TODO 3 - integer array of size MAX
         int array[MAX];
@@ -102,20 +107,29 @@ namespace example4 {
 
         //pointer subtraction
 
+        cout << "<example 4>" << endl;
         //TODO 4 - integer array of size MAX
+        int array[MAX];
+        array[MAX] = 0;
+        array[MAX-1] = 1;
+        array[MAX-2] = 2;
         //TODO 4 - integer pointer
+        int *prt;
 
+        prt = & array[MAX];
         //TODO 4// let us have address of the last element in pointer.
 
         for (int i = MAX; i > 0; i--) {
             //TODO 4
-            cout << "Address of var[" << i << "] = ";
+            cout << "Address of var[" << i << "] = " << prt << endl;
 
             //TODO 4
-            cout << "Value of var[" << i << "] = ";
+            cout << "Value of var[" << i << "] = " << *prt << endl;
 
             //TODO 4
             // point to the previous location
+            prt--;
+
         }
     }
 }
@@ -124,7 +138,7 @@ namespace example5 {
     void example() {
 
         //comparing pointers
-
+        cout << "<example 5>" << endl;
         //TODO 5 - integer array of size MAX
         //TODO 5 - integer pointer
 
@@ -320,11 +334,11 @@ namespace example13 {
 
 int main() {
 
-    //example1::example();
-    //example2::example();
+    example1::example();
+    example2::example();
     example3::example();
-    //example4::example();
-    //example5::example();
+    example4::example();
+//    example5::example();
     //example6::example();
     //example7::example();
     //example8::example();
