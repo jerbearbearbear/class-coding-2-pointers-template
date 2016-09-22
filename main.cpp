@@ -40,24 +40,30 @@ namespace example2 {
         //pointers basic 2
         //TODO 2 - create a integer variable var holding some value
         //TODO 2 - create a pointer of type int
+         int var = 5;
+         int * varPtr;
 
-        //TODO 2 - store address of var into pointer
+          //TODO 2 - store address of var into pointer
+          varPtr = &var;
+          //TODO 2
+          //(int *) (cout << "Value of var variable: ");
+          cout << var << endl;
+         //TODO 2 // print the address stored in ip pointer variable
+         cout << "Address stored in ip variable: ";
+         cout << varPtr << endl;
+
+          //TODO 2// access the value at the address available in pointer
+          cout << "Value of *ip variable: ";
+          cout << *varPtr << endl;
 
         //TODO 2
-        cout << "Value of var variable: ";
-
-        //TODO 2 // print the address stored in ip pointer variable
-        cout << "Address stored in ip variable: ";
-
-        //TODO 2// access the value at the address available in pointer
-        cout << "Value of *ip variable: ";
-
-        //TODO 2
-        cout << "Address of *ip variable: ";
-
+         cout << "Address of *ip variable: ";
+         cout << &varPtr << endl;
         //TODO 2 - set the pointer to null pointer
-
+        varPtr = nullptr;
         cout << "The value of ptr is ";
+        cout << varPtr << endl;
+
     }
 }
 
@@ -307,7 +313,7 @@ namespace example13 {
 int main() {
 
     example1::example();
-    //example2::example();
+    example2::example();
     //example3::example();
     //example4::example();
     //example5::example();
