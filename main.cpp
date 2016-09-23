@@ -148,7 +148,7 @@ namespace example5 {
         int *prt;
         //TODO 5// let us have address of the first element in pointer.
         prt = & array[MAX-1];
-        int i =prt;
+        int i = *prt;
         //TODO 5 iterate from &variable[MAX-1] to ptr
         while (42) {
 
