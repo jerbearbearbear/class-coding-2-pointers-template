@@ -41,27 +41,27 @@ namespace example2 {
         //pointers basic 2
         //TODO 2 - create a integer variable var holding some value
         //TODO 2 - create a pointer of type int
-         int var = 5;
-         int * varPtr;
+        int var = 5;
+        int * varPtr;
 
         cout << "<example 2>" << endl;
 
         //TODO 2 - store address of var into pointer
-          varPtr = &var;
-          //TODO 2
-          //(int *) (cout << "Value of var variable: ");
-          cout << var << endl;
-         //TODO 2 // print the address stored in ip pointer variable
-         cout << "Address stored in ip variable: ";
-         cout << varPtr << endl;
+        varPtr = &var;
+        //TODO 2
+        //(int *) (cout << "Value of var variable: ");
+        cout << var << endl;
+        //TODO 2 // print the address stored in ip pointer variable
+        cout << "Address stored in ip variable: ";
+        cout << varPtr << endl;
 
-          //TODO 2// access the value at the address available in pointer
-          cout << "Value of *ip variable: ";
-          cout << *varPtr << endl;
+        //TODO 2// access the value at the address available in pointer
+        cout << "Value of *ip variable: ";
+        cout << *varPtr << endl;
 
         //TODO 2
-         cout << "Address of *ip variable: ";
-         cout << &varPtr << endl;
+        cout << "Address of *ip variable: ";
+        cout << &varPtr << endl;
         //TODO 2 - set the pointer to null pointer
         varPtr = nullptr;
         cout << "The value of ptr is ";
@@ -88,7 +88,7 @@ namespace example3 {
         // let us have array address in pointer.
 
         //TODO 3 - point pointer to variable
-         somePtr= &array[0];
+        somePtr= &array[0];
         for (int i = 0; i < MAX; i++) {
             //TODO 3
             cout << "Address of var[" << i << "] = ";
@@ -110,9 +110,9 @@ namespace example4 {
         cout << "<example 4>" << endl;
         //TODO 4 - integer array of size MAX
         int array[MAX];
-        array[MAX] = 0;
-        array[MAX-1] = 1;
-        array[MAX-2] = 2;
+//        array[MAX] = 0;
+//        array[MAX-1] = 1;
+//        array[MAX-2] = 2;
         //TODO 4 - integer pointer
         int *prt;
 
@@ -138,31 +138,29 @@ namespace example5 {
     void example() {
 
         //comparing pointers
+        cout << "hello" ;
         cout << "<example 5>" << endl;
+
         //TODO 5 - integer array of size MAX
         int array[MAX];
-        array[MAX] = 0;
-        array[MAX-1] = 1;
-
         //TODO 5 - integer pointer
         int *prt;
         //TODO 5// let us have address of the first element in pointer.
-        prt = & array[MAX-1];
-        int i = *prt;
+        prt = &array[0];
+        int i = 0;
         //TODO 5 iterate from &variable[MAX-1] to ptr
-        while (42) {
-
-            //TODO 5
-            cout << "Address of var[" << i << "] = " << prt  << endl;
-
-
-            //TODO 5
-            cout << "Value of var[" << i << "] = " << *prt << endl;
-
-            //TODO 5// point to the next location
-
-            i++;
-        }
+//        while (42) {
+//
+//            //TODO 5
+//            cout << "Address of var[" << i << "] = " << prt << endl;
+//
+//            //TODO 5
+//            cout << "Value of var[" << i << "] = " << *prt << endl;
+//
+//            //TODO 5// point to the next location
+//
+//            i++;
+//        }
     }
 }
 
@@ -195,17 +193,21 @@ namespace example7 {
 
 namespace example8 {
     void example() {
-
+        cout << "<example 8>" << endl;
         //array of pointers
-        int var[MAX] = {10, 100, 200};
+        int var[MAX];
         //TODO 8 define an integer pointer of size MAX
+        int *array_ptr[MAX];
 
         for (int i = 0; i < MAX; i++) {
             //TODO 8// assign the address of integer.
+            cout << "Address of var[" << i << "] = "<< array_ptr[i] <<endl;
+
+
         }
         for (int i = 0; i < MAX; i++) {
             //TODO 8
-            cout << "Value of var[" << i << "] = ";
+            cout << "Value of var[" << i << "] = " << *array_ptr[i]<< endl;
         }
     }
 }
@@ -214,12 +216,13 @@ namespace example9 {
     void example() {
 
         //array of names
-
+        cout << "<example 9>" << endl;
         //TODO 9 - create a character pointer array of size MAX
+        char * array_prt[MAX];
 
         for (int i = 0; i < MAX; i++) {
             //TODO 9
-            cout << "Value of names[" << i << "] = ";
+            cout << "Value of names[" << i << "] = " << array_prt[3]<< endl;
 
         }
     }
@@ -227,23 +230,25 @@ namespace example9 {
 
 namespace example10 {
     void example() {
-        int var;
-        int *ptr;
+        int var=1;
+        int *ptr1;
         //TODO 10 - create a pointer to pointer
-
+        int *pptr;
+        pptr = ptr1;
 
         var = 3000;
 
         // take the address of var
-        ptr = &var;
+        pptr = &var;
 
         //TODO 10// take the address of ptr using address of operator &
 
+
         // take the value using pptr
         cout << "Value of var :" << var << endl;
-        cout << "Value available at *ptr :" << *ptr << endl;
+        cout << "Value available at *ptr :" << *pptr << endl;
         //TODO 10
-        cout << "Value available at **pptr :";
+        cout << "Value available at **pptr :" << *pptr << endl ;
 
     }
 }
@@ -344,12 +349,12 @@ int main() {
     example2::example();
     example3::example();
     example4::example();
-//    example5::example();
-    //example6::example();
+    example5::example();
+//    example6::example();
     //example7::example();
-    //example8::example();
-    //example9::example();
-    //example10::example();
+    example8::example();
+    example9::example();
+    example10::example();
     //example11::example();
     //example12::example();
     //example13::example();
