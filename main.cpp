@@ -148,7 +148,7 @@ void example() {
   int *prt;
   //TODO 5// let us have address of the first element in pointer.
   prt = &array[MAX - 1];
-  int i = prt;
+  int i = *prt;
   //TODO 5 iterate from &variable[MAX-1] to ptr
   while (42) {
 
@@ -199,16 +199,18 @@ void example() {
   //array of pointers
   int var[MAX] = {10, 100, 200};
   //TODO 8 define an integer pointer of size MAX
-  int *ptr = var[MAX];
+  size_t ptr = (sizeof(MAX));
   for (int i = 0; i < MAX; i++) {
     //TODO 8// assign the address of integer.
-    ptr = &var;
+    ptr = (size_t) (size_t) (int*) 0x100100080;
   }
   for (int i = 0; i < MAX; i++) {
     //TODO 8
     cout << "Value of var[" << i << "] = ";
-    ptr = &var;
+    //ptr = &var;
   }
+  cout << ptr;
+
 }
 }
 
@@ -222,7 +224,7 @@ void example() {
   for (int i = 0; i < MAX; i++) {
     //TODO 9
     cout << "Value of names[" << i << "] = ";
-    char *ptr = array[MAX];
+    //char *ptr = array[MAX];
 
   }
 }
@@ -348,7 +350,7 @@ int main() {
   //example7::example();
   example8::example();
   example9::example();
-  example10::example();
+  //example10::example();
   //example11::example();
   //example12::example();
   //example13::example();
