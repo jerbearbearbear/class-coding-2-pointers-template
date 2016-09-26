@@ -42,7 +42,7 @@ namespace example2 {
         //TODO 2 - create a integer variable var holding some value
         //TODO 2 - create a pointer of type int
         int var = 5;
-        int * varPtr;
+        int *varPtr;
 
         cout << "<example 2>" << endl;
 
@@ -82,7 +82,7 @@ namespace example3 {
         array[1]=2;
         array[2]=3;
         //TODO 3 - integer pointer
-        int * somePtr;
+        int *somePtr;
 
 
         // let us have array address in pointer.
@@ -142,25 +142,27 @@ namespace example5 {
         cout << "<example 5>" << endl;
 
         //TODO 5 - integer array of size MAX
-        int array[MAX];
+        int array[MAX]; {};
+
         //TODO 5 - integer pointer
-        int *prt;
+        int *newprt;
         //TODO 5// let us have address of the first element in pointer.
-        prt = &array[0];
-        int i = 0;
+        array[MAX] = 0;
+        int i=0;
         //TODO 5 iterate from &variable[MAX-1] to ptr
-//        while (42) {
-//
-//            //TODO 5
-//            cout << "Address of var[" << i << "] = " << prt << endl;
-//
-//            //TODO 5
-//            cout << "Value of var[" << i << "] = " << *prt << endl;
-//
-//            //TODO 5// point to the next location
-//
-//            i++;
-//        }
+        newprt = &array[MAX-1];
+         for (i=0; i < MAX; i++)
+         {
+            //TODO 5
+           cout << "Address of var[" << i << "] = " << newprt << endl;
+
+            //TODO 5
+            cout << "Value of var[" << i << "] =   " << *newprt<< endl;
+
+           //TODO 5// point to the next location
+
+         i++;
+          }
     }
 }
 
@@ -345,16 +347,16 @@ namespace example13 {
 
 int main() {
 
-    example1::example();
-    example2::example();
-    example3::example();
-    example4::example();
+    //example1::example();
+    //example2::example();
+    //example3::example();
+    //example4::example();
     example5::example();
 //    example6::example();
     //example7::example();
-    example8::example();
-    example9::example();
-    example10::example();
+   // example8::example();
+   // example9::example();
+   // example10::example();
     //example11::example();
     //example12::example();
     //example13::example();
